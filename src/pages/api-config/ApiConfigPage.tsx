@@ -9,7 +9,7 @@ interface Gateway {
   originator: string; is_default: boolean; active: boolean; created_at: string
 }
 
-const SERVICE_TYPES = ['Yurtici', 'Turkcell', 'Telsim']
+const SERVICE_TYPES = ['Yurtici', 'Turkcell', 'Telsim','Yurticisms']
 
 const SERVICE_COLORS: Record<string, { bg: string; color: string }> = {
   Turkcell: { bg: 'rgba(245,158,11,0.15)',  color: '#f59e0b' },
