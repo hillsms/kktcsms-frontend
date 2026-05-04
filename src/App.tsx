@@ -15,7 +15,8 @@ import DashboardPage     from '@/pages/dashboard/DashboardPage'
 import CompaniesPage     from '@/pages/companies/CompaniesPage'
 import UsersPage         from '@/pages/users/UsersPage'
 import RolesPage         from '@/pages/roles/RolesPage' 
- 
+import ApiConfigPage     from '@/pages/api-config/ApiConfigPage'
+import CreditsPage       from '@/pages/credits/CreditsPage' 
 import CompanyUsersPage  from '@/pages/company-users/CompanyUsersPage'
  
  
@@ -41,8 +42,8 @@ const Users         = withPermissions(resourceFor('/users'),          UsersPage)
 const Roles         = withPermissions(resourceFor('/roles'),          RolesPage) 
 
 const CompanyUsers  = withPermissions(resourceFor('/company-users'),  CompanyUsersPage)
- 
-
+const ApiConfig     = withPermissions(resourceFor('/api-config'),     ApiConfigPage)
+const Pricing       = withPermissions(resourceFor('/pricing'),        CreditsPage)
 // ── Spinner to show the top────────────────────────────────
 function Spinner() {
   return (
@@ -100,7 +101,7 @@ export default function App() {
           <Route path="/orders/:id"     element={<ComingSoon />} />
           <Route path="/companies"      element={<ComingSoon />} />
           <Route path="/company-users"  element={<ComingSoon />} />
-          <Route path="/pricing"        element={<ComingSoon />} />
+          <Route path="/pricing"        element={<Pricing />} />
           <Route path="/tickets"        element={<ComingSoon />} />
           <Route path="/shorturl"       element={<ComingSoon />} />       
 
@@ -108,12 +109,13 @@ export default function App() {
           <Route path="/credit-uploads" element={<ComingSoon />} />
           <Route path="/activity-log"   element={<ComingSoon />} />
 
-            <Route path="/api-config"     element={<ComingSoon />} />
+           
             <Route path="/blacklist"      element={<ComingSoon />} />
             <Route path="/phonebooks"     element={<ComingSoon />} />
             <Route path="/templates"      element={<ComingSoon />} />
 
           {/* Management */}
+           <Route path="/api-config"     element={<ApiConfig />} />
           <Route path="/users"          element={<Users />} />
           <Route path="/roles"          element={<Roles />} />          
 

@@ -109,7 +109,7 @@ export default function CreditsPage({ perms }: { perms: PagePermissions }) {
       .finally(() => setLoading(false))
   }
 
-  // ── Boot — loads everything once ─────────────────────────────────────────
+  // default it takes if the company not set any special pricing
 
   useEffect(() => {
     if (isAdmin) {
